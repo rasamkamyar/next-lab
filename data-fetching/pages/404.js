@@ -7,7 +7,7 @@ function Error() {
         alignItems: "center",
       }}
     >
-      NOT FOUND ANY PAGES
+      NOT FOUND PAGES
     </h1>
   );
 }
