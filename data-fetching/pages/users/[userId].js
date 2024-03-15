@@ -17,7 +17,7 @@ function UserDetail({ data }) {
 export default UserDetail;
 
 export async function getStaticPaths() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  const res = await fetch("http://localhost:3001/users");
   const data = await res.json();
   const dataUsers = data.slice(0, 4);
   const paths = dataUsers.map((user) => ({
@@ -35,9 +35,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   console.log("regeneration details");
   const { params } = context;
-  const res = await fetch(
-    `https://jsonplaceholder.typicode.com/users/${params.userId}`
-  );
+  const res = await fetch(`http://localhost:4000/users/${params.userId}`);
   const data = await res.json();
 
   if (!data.name) {

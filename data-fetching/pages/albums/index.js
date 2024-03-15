@@ -12,7 +12,7 @@ export default function Albums({ albums }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/albums");
+  const res = await fetch("http://localhost:3001/albums");
   const data = await res.json();
 
   return {
