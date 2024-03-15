@@ -5,6 +5,7 @@ function Error() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        color: "red",
       }}
     >
       NOT FOUND PAGES

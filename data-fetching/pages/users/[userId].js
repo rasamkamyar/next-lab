@@ -33,6 +33,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
+  console.log("regeneration details");
   const { params } = context;
   const res = await fetch(
     `https://jsonplaceholder.typicode.com/users/${params.userId}`
@@ -48,6 +49,7 @@ export async function getStaticProps(context) {
   return {
     props: {
       data,
+      revalidate: 10, // seconds
     },
   };
 }
