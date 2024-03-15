@@ -42,7 +42,8 @@ export async function getStaticProps(context) {
 
   if (!data.name) {
     return {
-      notFound: true,
+      // notFound: true,
+      redirect: { destination: "/" }, //for rdirecting
     };
   }
 
