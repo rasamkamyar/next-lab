@@ -1,10 +1,16 @@
+import Link from "next/link";
+
 export default function Albums({ albums }) {
   return (
     <>
       <h1>ALBUMS</h1>
       <ul>
         {albums.map((album) => {
-          return <li key={album.id}>{album.title}</li>;
+          return (
+            <li key={album.id}>
+              <Link href={`/albums/${album.id}`}>{album.title}</Link>
+            </li>
+          );
         })}
       </ul>
     </>

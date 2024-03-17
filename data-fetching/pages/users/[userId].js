@@ -35,13 +35,13 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   console.log("regeneration details");
   const { params } = context;
-  const res = await fetch(`http://localhost:4000/users/${params.userId}`);
+  const res = await fetch(`http://localhost:3001/users/${params.userId}`);
   const data = await res.json();
 
   if (!data.name) {
     return {
       // notFound: true,
-      redirect: { destination: "/" }, //for rdirecting
+      redirect: { destination: "/" }, //for redirecting
     };
   }
 
