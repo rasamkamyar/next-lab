@@ -14,8 +14,8 @@ export async function getServerSideProps(context) {
   const { params } = context;
   const res = await fetch(`http://localhost:3001/albums/${params.albumId}`);
   const data = await res.json();
+  
 
-  console.log(data);
   return {
     props: { album: data },
   };
