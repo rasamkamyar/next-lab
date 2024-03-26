@@ -1,18 +1,18 @@
 export const todos = [
   {
-    todo: 1,
-    "user": "A",
+    "id": 1,
+    "todo": "TODO A",
   },
   {
-    todo: 2,
-    "user": "B",
+    "id": 2,
+    "todo": "TODO B",
   },
   {
-    todo: 3,
-    "user": "C",
+    "id": 3,
+    "todo": "TODO C",
   },
   {
-    todo: 4,
-    "user": "D",
+    "id": 4,
+    "todo": "TODO D",
   },
 ];
