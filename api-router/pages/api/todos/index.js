@@ -13,5 +13,15 @@ export default function handler(req, res) {
       message: "success",
       data: newTodoItem,
     });
+  } else if (req.method === "DELETE") {
+    res.status(200).json({
+      message: "delete data",
+      data: [],
+    });
+  } else if (req.method === "PUT") {
+    res.status(200).json({
+      message: "replace all",
+      data: req.body,
+    });
   }
 }
